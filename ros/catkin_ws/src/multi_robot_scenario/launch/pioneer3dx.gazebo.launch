@@ -1,0 +1,44 @@
+<launch>
+  <arg name="robot_position_r1" default="-x -0.0 -y 0.0 -z 0.01" />
+  <arg name="robot_position_r2" default="-x -5.0 -y 0.0 -z 0.01" />
+
+	
+  <group ns="r1">
+    
+	<!-- Load the URDF into the ROS Parameter Server -->
+	<param name="robot_description" command="$(find xacro)/xacro '$(find multi_robot_scenario)/xacro/p3dx/pioneer3dx_r1.xacro'" />
+
+	<!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
+	<node name="urdf_spawner_r1" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model r1 -param robot_description $(arg robot_position_r1) "/>
+
+	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+	    <param name="publish_frequency" type="double" value="30.0"/>
+            <!-- param name="tf_prefix" value="r1_tf" / -->
+	</node>
+	
+	<node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher">
+            <param name="publish_frequency" type="double" value="30.0"/>
+        </node>
+
+    </group>
+    
+    <group ns="r2">
+
+	<!-- Load the URDF into the ROS Parameter Server -->
+	<param name="robot_description" command="$(find xacro)/xacro '$(find multi_robot_scenario)/xacro/p3dx/pioneer3dx_r2.xacro'" />
+	
+	<!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
+	<node name="urdf_spawner_r2" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model r2 -param robot_description $(arg robot_position_r2) "/>
+
+	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+	    <param name="publish_frequency" type="double" value="30.0"/>
+           <!-- param name="tf_prefix" value="r2_tf" / -->
+	</node>
+	
+	<node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher">
+            <param name="publish_frequency" type="double" value="30.0"/>
+        </node>
+
+    </group>
+
+</launch>

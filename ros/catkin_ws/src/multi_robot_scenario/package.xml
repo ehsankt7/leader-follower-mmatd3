@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>multi_robot_scenario</name>
+  <version>1.0.0</version>
+  <description>ROS/Gazebo simulation assets for leader-follower robot navigation.</description>
+
+  <maintainer email="khodaygan@sharif.edu">Saeed Khodaygan</maintainer>
+  <license>MIT</license>
+
+  <url type="repository">https://github.com/ehsankt7/leader-follower-mmatd3</url>
+
+  <author>Ehsan Kazemi Tameh</author>
+  <author>Mohammadreza Estarki</author>
+  <author>Saeed Khodaygan</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>xacro</build_depend>
+  <build_export_depend>xacro</build_export_depend>
+  <exec_depend>xacro</exec_depend>
+
+  <export/>
+</package>

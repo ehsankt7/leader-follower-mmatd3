@@ -1,0 +1,49 @@
+{
+  "algorithm": "matd3",
+  "network": {
+    "observation_dim_per_agent": 64,
+    "action_dim_per_agent": 2,
+    "hidden_sizes": [
+      650,
+      500
+    ],
+    "n_agents": 2
+  },
+  "exploration": {
+    "gaussian_std_start": 0.5,
+    "gaussian_std_end": 0.1,
+    "gaussian_decay_steps": 500000,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.005,
+    "epsilon_decay": 0.9999
+  },
+  "training": {
+    "episodes": 50000,
+    "max_steps_per_episode": 500,
+    "batch_size": 128,
+    "replay_capacity": 1000000,
+    "actor_learning_rate": 0.0001,
+    "critic_learning_rate": 0.001,
+    "gamma": 0.9999,
+    "tau": 0.005,
+    "policy_update_frequency": 2,
+    "target_policy_noise": 0.2,
+    "target_noise_clip": 0.5,
+    "learning_starts_episodes": 50,
+    "checkpoint_interval_episodes": 500,
+    "seed": 0
+  },
+  "scenario": {
+    "name": "simple",
+    "launch_file": "simple.launch",
+    "world_file": "simple.world",
+    "random_boxes": 4,
+    "arena_half_width": 8.0,
+    "follower_spawn_min_m": 1.0,
+    "follower_spawn_max_m": 3.0,
+    "goal_min_robot_distance_m": 1.5,
+    "obstacle_min_robot_or_goal_distance_m": 2.0,
+    "goal_reached_distance_m": 0.4,
+    "collision_distance_m": 0.35
+  }
+}

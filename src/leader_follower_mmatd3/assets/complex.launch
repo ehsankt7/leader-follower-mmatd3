@@ -1,0 +1,7 @@
+<launch>
+  <arg name="gui" default="true"/>
+  <include file="$(find multi_robot_scenario)/launch/empty_world.launch">
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="world_name" value="$(find multi_robot_scenario)/launch/complex.world"/>
+  </include>
+</launch>

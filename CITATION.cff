@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated article."
+title: "M-MATD3 for Leader-Follower Safe Path Planning"
+version: 1.0.0
+repository-code: "https://github.com/ehsankt7/leader-follower-mmatd3"
+authors:
+  - family-names: "Kazemi Tameh"
+    given-names: "Ehsan"
+  - family-names: "Estarki"
+    given-names: "Mohammadreza"
+  - family-names: "Khodaygan"
+    given-names: "Saeed"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Kazemi Tameh"
+      given-names: "Ehsan"
+    - family-names: "Estarki"
+      given-names: "Mohammadreza"
+    - family-names: "Khodaygan"
+      given-names: "Saeed"
+  title: "Deep reinforcement learning-based safe path planning for leader-follower robots"
+  journal: "Intelligent Service Robotics"
+  volume: 19
+  year: 2026
+  doi: "10.1007/s11370-026-00745-y"

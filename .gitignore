@@ -1,0 +1,28 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+
+# ROS/catkin generated files
+ros/catkin_ws/build/
+ros/catkin_ws/devel/
+ros/catkin_ws/logs/
+
+# Training artifacts
+runs/
+outputs/
+checkpoints/*.pt
+checkpoints/*.pth
+results/*.csv
+results/*.npy
+results/*.npz
+
+# Editors/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
