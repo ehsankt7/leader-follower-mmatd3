@@ -28,9 +28,9 @@ The system consists of a leader robot navigating toward a goal and a follower ro
 
 Both agents use LiDAR-based observations and continuous linear and angular velocity commands. The proposed M-MATD3 method builds on multi-agent actor–critic reinforcement learning and modifies the actor-update mechanism of MATD3 by incorporating information from both critic networks.
 
-The framework is evaluated in ROS/Gazebo using randomly generated obstacle configurations with different levels of environmental complexity.
+The framework is evaluated in ROS-1/Gazebo using randomly generated obstacle configurations with different levels of environmental complexity.
 
-For the complete state and action definitions, reward formulation, network architecture, algorithm derivation, and experimental setup, please refer to the paper.
+For comprehensive details on the state and action definitions, reward formulation, networks architecture, algorithm derivation, and experimental setup, please refer to the paper.
 
 ## Results
 
@@ -61,7 +61,7 @@ docs/                         additional usage and reproduction information
 
 ## Installation
 
-The experiments were developed using Python, PyTorch, ROS, and Gazebo.
+The experiments were developed using Python, PyTorch, ROS-1, and Gazebo.
 
 ```bash
 git clone https://github.com/ehsankt7/leader-follower-mmatd3.git
