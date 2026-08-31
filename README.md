@@ -61,7 +61,7 @@ docs/                         additional usage and reproduction information
 
 ## Installation
 
-The experiments were developed using Python, PyTorch, ROS-1, and Gazebo.
+The experiments were developed using Python (3.9), PyTorch, ROS-1, and Gazebo.
 
 ```bash
 git clone https://github.com/ehsankt7/leader-follower-mmatd3.git
